@@ -1,0 +1,227 @@
+hdfs dfs -put /home/cloudera/Downloads/arbres.csv /user/cloudera/data
+then run the jar YeartreeHeight
+
+Question 2.7
+
+You will find below the results from the Java Project YearHeightTree and the class Tree. For each tree contained in the arbres.csv file, we retrieved the year when it was planted and its current height:
+
+[cloudera@quickstart ~]$ hadoop jar /home/cloudera/Documents/hadoopTutorial/YearHeightTree.jar display.tree.Tree /home/cloudera/Downloads/arbres.csv /user/cloudera/output
+Arbre [year= ANNEE PLANTATION , height=HAUTEUR]
+Arbre [year= 1935 , height=13.0]
+Arbre [year= 1854 , height=20.0]
+Arbre [year= 1862 , height=22.0]
+Arbre [year= 1906 , height=16.0]
+Arbre [year= 1784 , height=30.0]
+Arbre [year= 1860 , height=45.0]
+Arbre [year= 1840 , height=40.0]
+Arbre [year= 1933 , height=16.0]
+Arbre [year=  , height=30.0]
+Arbre [year= 1913 , height=33.0]
+Arbre [year=  , height=30.0]
+Arbre [year=  , height=35.0]
+Arbre [year= 1862 , height=35.0]
+Arbre [year=  , height=12.0]
+Arbre [year= 1850 , height=30.0]
+Arbre [year=  , height=10.0]
+Arbre [year= 1857 , height=10.0]
+Arbre [year= 1882 , height=27.0]
+Arbre [year= 1872 , height=]
+Arbre [year=  , height=30.0]
+Arbre [year= 1843 , height=26.0]
+Arbre [year= 1872 , height=18.0]
+Arbre [year= 1845 , height=28.0]
+Arbre [year= 1930 , height=20.0]
+Arbre [year=  , height=10.0]
+Arbre [year= 1870 , height=25.0]
+Arbre [year= 1601 , height=11.0]
+Arbre [year=  , height=12.0]
+Arbre [year= 1879 , height=22.0]
+Arbre [year= 1850 , height=20.0]
+Arbre [year=  , height=35.0]
+Arbre [year= 1894 , height=18.0]
+Arbre [year=  , height=30.0]
+Arbre [year= 1935 , height=30.0]
+Arbre [year= 1873 , height=10.0]
+Arbre [year= 1862 , height=34.0]
+Arbre [year= 1833 , height=12.0]
+Arbre [year=  , height=35.0]
+Arbre [year=  , height=18.0]
+Arbre [year= 1897 , height=14.0]
+Arbre [year= 1850 , height=30.0]
+Arbre [year= 1872 , height=40.0]
+Arbre [year= 1882 , height=30.0]
+Arbre [year= 1859 , height=30.0]
+Arbre [year= 1900 , height=16.0]
+Arbre [year= 1862 , height=35.0]
+Arbre [year= 1930 , height=22.0]
+Arbre [year= 1870 , height=5.0]
+Arbre [year= 1871 , height=25.0]
+Arbre [year= 1875 , height=14.0]
+Arbre [year= 1860 , height=15.0]
+Arbre [year= 1935 , height=15.0]
+Arbre [year= 1905 , height=2.0]
+Arbre [year= 1879 , height=20.0]
+Arbre [year= 1895 , height=23.0]
+Arbre [year= 1829 , height=30.0]
+Arbre [year= 1895 , height=10.0]
+Arbre [year=  , height=12.0]
+Arbre [year= 1862 , height=30.0]
+Arbre [year= 1857 , height=27.0]
+Arbre [year= 1945 , height=20.0]
+Arbre [year= 1880 , height=20.0]
+Arbre [year= 1905 , height=30.0]
+Arbre [year=  , height=6.0]
+Arbre [year= 1868 , height=15.0]
+Arbre [year= 1906 , height=12.0]
+Arbre [year= 1815 , height=31.0]
+Arbre [year= 1860 , height=42.0]
+Arbre [year= 1935 , height=12.0]
+Arbre [year=  , height=14.0]
+Arbre [year= 1814 , height=31.0]
+Arbre [year= 1900 , height=20.0]
+Arbre [year= 1895 , height=25.0]
+Arbre [year=  , height=20.0]
+Arbre [year= 1772 , height=13.0]
+Arbre [year= 1782 , height=30.0]
+Arbre [year= 1840 , height=30.0]
+Arbre [year=  , height=22.0]
+Arbre [year= 1893 , height=18.0]
+Arbre [year= 1865 , height=25.0]
+Arbre [year= 1882 , height=20.0]
+Arbre [year=  , height=15.0]
+Arbre [year= 1814 , height=20.0]
+Arbre [year= 1865 , height=20.0]
+Arbre [year= 1939 , height=25.0]
+Arbre [year= 1852 , height=30.0]
+Arbre [year=  , height=20.0]
+Arbre [year= 1907 , height=9.0]
+Arbre [year= 1847 , height=40.0]
+Arbre [year= 1859 , height=25.0]
+Arbre [year=  , height=12.0]
+Arbre [year= 1852 , height=30.0]
+Arbre [year= 1863 , height=12.0]
+Arbre [year= 1896 , height=16.0]
+Arbre [year= 1918 , height=32.0]
+Arbre [year= 1860 , height=22.0]
+Arbre [year= 1870 , height=15.0]
+[cloudera@quickstart ~]$ 
+
+
+Question 2.8:
+
+Here are the results we obtained for the last 10 stations (we typed -tail) contained in the ncdc.noaa.gov text file. 
+- The first column of the results is the USAF code
+- the third column of the results is the station name
+- the fourth column of the results is the country
+- the ninth column of the results is the elevation of the station (in meters)
+
+[cloudera@quickstart ~]$ hdfs dfs -tail isd-history.txt
+227.1 19680101 19721231
+999999 94908 DUBUQUE MUNICIPAL AP          US   IA KDBQ  +42.398 -090.704 +0329.2 19510201 19721231
+999999 94910 WATERLOO MUNICIPAL AP         US   IA KALO  +42.554 -092.401 +0267.6 19490101 19721231
+999999 94925 GRAND FORKS AF                US   ND KRDR  +47.967 -097.400 +0277.7 19710101 19710101
+999999 94931 HIBBING CHISHOLM-HIBBING AP   US   MN KHIB  +47.386 -092.839 +0413.6 19720101 19721231
+999999 94995 LINCOLN 8 ENE                 US   NE       +40.848 -096.565 +0362.4 20020115 20171006
+999999 94996 LINCOLN 11 SW                 US   NE       +40.695 -096.854 +0418.2 20020114 20171006
+999999 96404 TOK 70 SE                     US   AK       +62.737 -141.208 +0609.6 20110924 20171006
+999999 96406 RUBY 44 ESE                   US   AK       +64.502 -154.130 +0078.9 20140828 20171006
+999999 96407 SELAWIK 28 E                  US   AK       +66.562 -159.004 +0006.7 20150813 20171006
+999999 96408 DENALI 27 N                   US   AK       +63.452 -150.875 +0678.2 20150819 20171006
+
+[cloudera@quickstart ~]$ hadoop jar /home/cloudera/Documents/hadoopTutorial/CompactFile.jar read.compact.ReadcompactFile isd-history.txt /user/cloudera/output
+
+
+
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+--2018-01-14 09:07:09--  http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+Resolving www.textfiles.com... 208.86.224.90
+Connecting to www.textfiles.com|208.86.224.90|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 624405 (610K) [text/plain]
+Saving to: â€œdefoe-robinson-103.txtâ€ 
+
+100%[=======================================================================================================================================>] 624,405     69.3K/s   in 7.5s    
+
+2018-01-14 09:07:17 (81.4 KB/s) - â€œdefoe-robinson-103.txtâ€  saved [624405/624405]
+
+[cloudera@quickstart ~]$ hadoop fs -copyFromLocal defoe-robinson-103.txt input
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/callwild
+--2018-01-14 09:07:25--  http://www.textfiles.com/etext/FICTION/callwild
+Resolving www.textfiles.com... 208.86.224.90
+Connecting to www.textfiles.com|208.86.224.90|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 175998 (172K)
+Saving to: â€œcallwildâ€ 
+
+
+[cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/input
+Found 3 items
+-rw-r--r--   1 cloudera cloudera     175998 2018-01-14 09:07 /user/cloudera/input/callwild
+-rw-r--r--   1 cloudera cloudera     624405 2018-01-14 09:07 /user/cloudera/input/defoe-robinson-103.txt
+-rw-r--r--   1 cloudera cloudera       9528 2018-01-14 14:05 /user/cloudera/input/soc-Epinions1.html
+
+
+100%[=======================================================================================================================================>] 175,998     76.6K/s   in 2.2s    
+
+2018-01-14 09:07:28 (76.6 KB/s) - â€œcallwildâ€  saved [175998/175998]
+
+[cloudera@quickstart ~]$ hadoop fs -copyFromLocal callwild input
+
+
+
+
+
+hadoop jar /home/cloudera/Documents/hadoopTutorial/Wordcount.jar cs.Lab2.wordcount.WordCount
+
+$ hadoop jar cs_Lab_tfidf.jar cs.Lab.tfidf.TFIDFDriver
+/input/callwild.txt /results
+
+=====================================================================================
+TFIDF
+
+
+[cloudera@quickstart ~]$ hadoop jar TFIDF.jar /user/cloudera/input/defoe-robinson-103.txt /result_TFIDF
+[cloudera@quickstart ~]$ hdfs dfs -ls /result_TFIDF1
+Found 2 items
+-rw-r--r--   1 cloudera supergroup          0 2018-02-01 09:17 /result_TFIDF1/_SUCCESS
+-rw-r--r--   1 cloudera supergroup     217793 2018-02-01 09:17 /result_TFIDF1/part-r-00000
+
+
+hdfs dfs -cat /result_TFIDF1/part-r-00000
+
+
+
+troubles	defoe-robinson-103.txt	3
+troublesome	defoe-robinson-103.txt	1
+trough	defoe-robinson-103.txt	1
+truce	defoe-robinson-103.txt	1
+true	defoe-robinson-103.txt	31
+truly	defoe-robinson-103.txt	5
+truncheon	defoe-robinson-103.txt	1
+trunk	defoe-robinson-103.txt	1
+trust	defoe-robinson-103.txt	6
+trusted	defoe-robinson-103.txt	4
+trustees	defoe-robinson-103.txt	9
+trusty	defoe-robinson-103.txt	1
+truth	defoe-robinson-103.txt	2
+try	defoe-robinson-103.txt	12
+tumbling	defoe-robinson-103.txt	1
+turf	defoe-robinson-103.txt	2
+turf-wall	defoe-robinson-103.txt	1
+turfs	defoe-robinson-103.txt	1
+turn	defoe-robinson-103.txt	18
+turned	defoe-robinson-103.txt	23
+
+
+
+
+===========================================================================================================
+
+PageRanking
+
+wget http://www.textfiles.com/etext/FICTION/https://snap.stanford.edu/data/soc-Epinions1.
+html
+
+hadoop fs -copyFromLocal defoe-srobinson-103.txt input
+
+
